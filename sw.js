@@ -1,4 +1,4 @@
-const CACHE_NAME = 'absensi-prtxsby';
+const CACHE_NAME = 'absensi-prtxsby-v2';
 const ASSETS = ['./', './index.html', './manifest.json', './icon-512.png'];
 
 self.addEventListener('install', (event) => {
@@ -6,6 +6,17 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
   );
   self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) =>
+      Promise.all(
+        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
+      )
+    )
+  );
+  self.clients.claim();
 });
 
 self.addEventListener('fetch', (event) => {
