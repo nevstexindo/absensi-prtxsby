@@ -1,25 +1,20 @@
 {
-  "name": "Absensi Prontex",
+  "id": "/absensi-prtxsby/",
+  "name": "CV. PRONTEX SURABAYA - Absensi",
   "short_name": "Absensi Prontex",
-  "description": "Aplikasi Absensi Digital CV. Prontex Surabaya",
-  "start_url": "./",
+  "description": "Sistem Absensi Digital Real-Time CV. PRONTEX SURABAYA",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#2B6A4E",
   "orientation": "portrait",
-  "background_color": "#ffffff",
-  "theme_color": "#0d6efd",
   "icons": [
     {
-      "src": "https://nevstexindo.github.io/absensi-prtxsby/icon-512.png",
+      "src": "icon-512.png?v=2",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
-    },
-    {
-      "src": "https://nevstexindo.github.io/absensi-prtxsby/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
     }
   ]
 }
