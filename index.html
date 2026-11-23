@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Aplikasi Absensi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0d6efd" />
+  <title>Absensi Prontex Surabaya</title>
+  <link rel="manifest" href="manifest.json" />
   <style>
-    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-    iframe { width: 100%; height: 100%; border: none; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbzXy8GXKVRAoNZcVm0Bj63R5nu7ef3f41PfVdYp1_b68QAh7XG74iGsyi_PEKXLxdQS/exec" allow="geolocation; camera"></iframe>
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbzXy8GXKVRAoNZcVm0Bj63R5nu7ef3f41PfVdYp1_b68QAh7XG74iGsyi_PEKLxdQS/exec"
+    allow="geolocation; camera; microphone"
+  ></iframe>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch((err) => {
+          console.error("Gagal mendaftarkan Service Worker:", err);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
