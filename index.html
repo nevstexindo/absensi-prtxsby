@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#2B6A4E" />
-  <title>Absensi Prontex Surabaya</title>
-  <link rel="manifest" href="manifest.json" />
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("./sw.js");
-    }
-    window.location.replace("https://script.google.com/macros/s/AKfycbzXy8GXKVRAoNZcVm0Bj63R5nu7ef3f41PfVdYp1_b68QAh7XG74iGsyi_PEKXLxdQS/exec");
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Absensi NEVS Surabaya</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#060911">
+  <link rel="apple-touch-icon" href="icon-512.png">
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #060911; }
+    iframe { width: 100%; height: 100%; border: none; display: block; }
+  </style>
 </head>
-<body style="margin:0;display:flex;justify-content:center;align-items:center;height:100vh;background:#E8DEC8;font-family:sans-serif;color:#2B6A4E;font-weight:bold;">
-  Membuka Absensi Prontex...
+<body>
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbyQv2adQMnCntSiDs89vx4xdoVOc9Hg3gNxnJSvUHXV-801zqgBmpDRWK3EYTKKRLw-/exec" 
+    allow="camera; microphone; geolocation; clipboard-read; clipboard-write"
+    allowfullscreen>
+  </iframe>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
 </body>
 </html>
