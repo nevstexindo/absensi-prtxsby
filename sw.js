@@ -1,4 +1,4 @@
-const CACHE_NAME = 'absensi-prtxsby-v2';
+const CACHE_NAME = 'absensi-prtxsby';
 const ASSETS = ['./', './index.html', './manifest.json', './icon-512.png'];
 
 self.addEventListener('install', (event) => {
